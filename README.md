@@ -82,30 +82,6 @@ Library/
 
 ---
 
-## Suggested `.gitignore`
-
-```
-# Visual Studio
-.vs/
-bin/
-obj/
-*.user
-*.suo
-
-# Build
-bin/
-obj/
-
-# Database
-*.mdf
-*.ldf
-
-# Others
-*.log
-```
-
----
-
 ## Suggested Improvements
 
 - Include SQL schema / seed data or automated migration scripts (e.g., using EF Code First or SQL scripts) so other developers can easily provision `libraryDB`.
@@ -115,12 +91,6 @@ obj/
 
 ---
 
-## License
-
-Add a license of your choice (e.g., MIT) to make the repository ready for public distribution.
-
----
-
 ## Contact
 
-Maintained by **SeyedAmirMohammad Mirkarimi**.
+Maintained by **Pedram Mirkarimi**.

@@ -90,7 +90,3 @@ Library/
 - Add unit tests or integration tests where applicable.
 
 ---
-
-## Contact
-
-Maintained by **Pedram Mirkarimi**.

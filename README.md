@@ -39,7 +39,6 @@ Library/
 │   ├── Icon/                       # UI icons
 │   ├── Reports/                    # Stimulsoft report templates (if present)
 │   └── App.config                  # Contains connection string
-└── .vs/                            # Visual Studio workspace files (ignore for git)
 ```
 
 ---

@@ -61,59 +61,52 @@ Library/
      ```
    - This expects a local SQL Server instance and a database named `libraryDB`. You have two options:
      - Attach / restore an existing database named `libraryDB` to your SQL Server instance.
-     - Create a new database `libraryDB` and run the application's SQL scripts (if you have them) or allow the app to create tables (if implemented).
-   - If you do not use Integrated Security or your SQL Server instance name differs, update the connection string in `App.config` accordingly.
-
-## Database Setup Instructions
-
-To get the project running, you'll need to set up the SQL database. The following script will create the database named `libraryDB` and all the necessary tables.
-You can execute this script in your preferred SQL Server management tool (like SQL Server Management Studio or Azure Data Studio).
-
-### SQL Script
-
-```sql
--- 1. Create the Database
--- This command creates the main database for the project.
-CREATE DATABASE libraryDB;
-
--- 2. Switch to the new database context
--- This ensures that the subsequent tables are created inside 'libraryDB'.
-USE libraryDB;
-
--- 3. Create the necessary tables
--- Table to store information about the books.
-CREATE TABLE Book (
-    id int IDENTITY(1,1) PRIMARY KEY,
-    name nvarchar(50) NOT NULL,
-    writer nvarchar(50) NOT NULL,
-    genre nvarchar(50) NOT NULL
-);
-CREATE TABLE Users (
-    id int IDENTITY(1,1) PRIMARY KEY,
-    fname nvarchar(50) NOT NULL,
-    lName nvarchar(50) NOT NULL,
-    phoneNumber nvarchar(50) NOT NULL
-);
-CREATE TABLE Depository (
-    id int IDENTITY(1,1) PRIMARY KEY,
-    bookId int NOT NULL,
-    borrowerId int NOT NULL,
-    date nvarchar(50) NOT NULL,
-	maxDate nvarchar(50) NOT NULL
-);
-CREATE TABLE Genre (
-    id int IDENTITY(1,1) PRIMARY KEY,
-    genre nvarchar(50) NOT NULL
-);
-
-```
-
-After running this script, the database schema will be ready for the application to use.
-
-
-5. **Build & Run**  
-   - Build the solution (`Build > Build Solution`).
-   - Run the application (`Debug > Start Debugging` or press F5).
+     - Create a new database `libraryDB` and run the application's SQL scripts or allow the app to create tables (if implemented).
+	
+	### SQL Script
+	
+	```sql
+	-- 1. Create the Database
+	-- This command creates the main database for the project.
+	CREATE DATABASE libraryDB;
+	
+	-- 2. Switch to the new database context
+	-- This ensures that the subsequent tables are created inside 'libraryDB'.
+	USE libraryDB;
+	
+	-- 3. Create the necessary tables
+	-- Table to store information about the books.
+	CREATE TABLE Book (
+	    id int IDENTITY(1,1) PRIMARY KEY,
+	    name nvarchar(50) NOT NULL,
+	    writer nvarchar(50) NOT NULL,
+	    genre nvarchar(50) NOT NULL
+	);
+	CREATE TABLE Users (
+	    id int IDENTITY(1,1) PRIMARY KEY,
+	    fname nvarchar(50) NOT NULL,
+	    lName nvarchar(50) NOT NULL,
+	    phoneNumber nvarchar(50) NOT NULL
+	);
+	CREATE TABLE Depository (
+	    id int IDENTITY(1,1) PRIMARY KEY,
+	    bookId int NOT NULL,
+	    borrowerId int NOT NULL,
+	    date nvarchar(50) NOT NULL,
+		maxDate nvarchar(50) NOT NULL
+	);
+	CREATE TABLE Genre (
+	    id int IDENTITY(1,1) PRIMARY KEY,
+	    genre nvarchar(50) NOT NULL
+	);
+	
+	```
+	
+	After running this script, the database schema will be ready for the application to use.
+	
+	5. **Build & Run**  
+	   - Build the solution (`Build > Build Solution`).
+	   - Run the application (`Debug > Start Debugging` or press F5).
 
 ---
 

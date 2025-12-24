@@ -64,7 +64,7 @@ It uses a local **SQL Server** database (`libraryDB`) and a configurable connect
 ## 📁 Project Structure
 
 ```text
-Library-Management-System/
+libradesk/
 ├─ Icon/                   # UI icons/assets
 ├─ Library/                # Visual Studio project folder
 ├─ Library.sln             # Solution
@@ -89,8 +89,8 @@ Library-Management-System/
 ### 2) Clone the repository
 
 ```bash
-git clone https://github.com/Pedram-Mirkarimi/Library-Management-System.git
-cd Library-Management-System
+git clone https://github.com/Pedram-Mirkarimi/libradesk.git
+cd libradesk
 ```
 
 ### 3) Open the solution
